@@ -6,27 +6,17 @@ This is adapation of [todo.txt's](https://github.com/todotxt/todo.txt) philosoph
 ## The format
 The format is quite simple, one event one line
 ```
-<start> [<end>] [(<repeat>)] <description> @context +project custom_data:value
+<interval> <description> @context +project custom_data:value
 ```
-
-|Name|Format|Example|
-|--|--|--|
-|`<start>`|`ISO8601`|`2026-01-01T20:20`|
-|`<end>`|`ISO8601` or `ISO8601 duration`|`2026-01-01T20:20` or `P7D20H`|
-|`<repeat>`|`ISO8601 duration`|`P1D` to repeat every day|
-|`<text>`||Pickup dry-cleaners|
-|`@context`||@house|
-|`custom_data:value`|`key:value`, where key and value can be anything without spaces or colons|`location:walmart`|
-
-- If `<end>` is not specified then length is decided from `<start>` where `2015` would mean whole year `2015` and `2015-06` whole June of 2015
 
 Some more examples so you get the idea
-```
-2026-01-28 (P7D) Take out garbage @chores
-2026-02-10 (P1Y) John's birthday @birthdays
-2026-02-16T10:00 P1H Meeting with Mike @work
-2026-02-30 Shippment arrival @work
-```
+
+|Example|Explaination|
+|--|--|
+|`R/2026-01-28//F7D Take out garbage @chores`|Starting at 28th January repeats every 7 days for the whole day|
+|`R/2026-02-10//F1Y John's birthday @birthdays`|Starting at 2nd February repeats every year for the whole day|
+|`2026-02-16T10:00/11:00 Meeting with Mike @work`|2nd February from 10:00 to 11:00, could also be written as `2026-02-16T10:00/P1H ...`|
+|`2026-02-20 Shippment arrival @work`|Whole day at 20th February|
 
 - [`ISO8601 format`](https://en.wikipedia.org/wiki/ISO_8601)
 - [`ISO8601 duration format`](https://en.wikipedia.org/wiki/ISO_8601#Durations)
