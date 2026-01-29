@@ -9,6 +9,8 @@ The format is quite simple, one event one line
 <interval> <description> @context +project custom_data:value
 ```
 
+![](./syntax.png)
+
 Some more examples so you get the idea
 
 |Example|Explaination|
